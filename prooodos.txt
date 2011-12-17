@@ -18,3 +18,20 @@ stirling_2():={
 
 }
 :;
+fract(n,m):={
+    local j,result;
+    local x:=n;
+    
+
+    for(j := 1; j <= m; j++){
+
+        x := x *(n-j); //FactorialPower[n,m-1]
+    
+    }
+
+    result := x /(m+1); //(FactorialPower[n,m+1])/m+1
+    
+    return(result);
+
+}
+:;
