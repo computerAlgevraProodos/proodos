@@ -57,10 +57,21 @@ x_m(n,m):={
 
 sum_poly(poly,k):={
   
-  local len;
+  local j,len,res,n;
+
+         n :=k; 
+         res:= 0; 
+
 
         syntelestes := coeff(poly,k); //pairnoume lista me tous syntelestes tou polyonymou
                                      
-       
-       len := length(syntelestes); 
+        len := length(syntelestes); 
+
+ for(j := len-1; j >= 0; j--){ //jekinaw apo pisw thn prospelash tou pinaka twn syntelestwn
+
+            if( syntelestes[j] != 0 && j != (len-1) ){
+                
+                 res := res + syntelestes[j] * sum_dyn(n,(len-1)-j);
+            }
+
 }:;
