@@ -54,3 +54,13 @@ x_m(n,m):={
     return(res);
 }
 :;
+
+sum_poly(poly,k):={
+  
+  local len;
+
+        syntelestes := coeff(poly,k); //pairnoume lista me tous syntelestes tou polyonymou
+                                     
+       
+       len := length(syntelestes); 
+}:;
