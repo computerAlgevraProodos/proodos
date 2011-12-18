@@ -36,7 +36,7 @@ fract(n,m):={
 }
 :;
 
-x_m(n,m):={
+x_n(n,m):={
 
     local j,k,strlg_2;
     local res:=0;
@@ -71,7 +71,7 @@ sum_poly(poly,k):={
 
             if( syntelestes[j] != 0 && j != (len-1) ){
                 
-                 res := res + syntelestes[j] * sum_dyn(n,(len-1)-j);
+                 res := res + syntelestes[j] * x_n(n,(len-1)-j);
             }
 
 }:;
