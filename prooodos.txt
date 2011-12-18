@@ -35,3 +35,22 @@ fract(n,m):={
 
 }
 :;
+
+x_m(n,m):={
+
+    local j,k,strlg_2;
+    local res:=0;
+    
+          k := m;
+    stirl := stirling_2(); 
+    stirl := row(stirl,m);   //pairnw thn m grammh tou pinaka striling
+     
+    for(j := 1; j <= m; j++){
+
+        res := res + stirl[m-j+1] * fract(n,k); //ypologizw to a8roisma
+        k--;
+    }
+   
+    return(res);
+}
+:;
